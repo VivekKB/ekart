@@ -1,0 +1,96 @@
+Microservices	Database name	Table	Coloumns	
+				
+ProductMS	Product	Product_details	 
+      product_id(PRIMARY KEY)	
+			display_name	
+			short desc	
+			desc	
+			category	
+			price	
+			delivery charge	
+				
+		Recommendation_details	
+      category	
+			reco_category	
+			 	
+		Seller	
+      seller_id	
+			seller_name	
+			product_name	
+			discount	
+			price	
+				
+				
+UserMS	User	Account_details	
+      user_id	
+			name	
+			email_id	
+			password	
+			account_type	
+				
+		Address_details	
+      address_id	
+			user_id	
+			address	
+			city	
+			state	
+			pincode	
+			phone_number	
+				
+		Offer_details	user_id	
+			product_id	
+			seller_id	
+			discount	
+				
+				
+CartMS	Cart	Cart_items	
+      product_id	
+			product_name	
+			seller_name	
+			category	
+			quantity	
+				
+		ekart	user_id	
+			cart_id	
+			List<Cart_items> items	
+			quantity	
+				
+		Wishlist	
+      user_id	
+			product_id	
+			short_description	
+			category	
+				
+CheckoutMS	Checkout	card_details	
+      card_id	
+			user_id	
+			card_number	
+			name_on_card	
+			expiry_month	
+			expiry_year	
+				
+OrderMS	Order	order_details	
+      order_id	
+			user_id	
+			display_name	
+			quantity	
+			product_price	
+			address_id	
+			card_id	
+			status	
+			product_rating	
+			seller_rating	
+			date	
+      
+		  ProductRating
+      category
+      userId
+      reviewComments
+      rating
+      				
+NotificationMS	Notification	Notifications	
+      user_id	
+			message_id	
+			message_type	
+			message	
+			timestamp	
