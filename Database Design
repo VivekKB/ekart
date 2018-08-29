@@ -1,7 +1,9 @@
 Microservices	Database name	Table	Coloumns	
 				
-ProductMS	Product	Product_details	 
-      product_id(PRIMARY KEY)	
+ProductMS	
+	Product	
+		Product_details	 
+      		product_id(PRIMARY KEY)	
 			display_name	
 			short desc	
 			desc	
@@ -10,7 +12,7 @@ ProductMS	Product	Product_details
 			delivery charge	
 				
 		Recommendation_details	
-      category	
+      			category	
 			reco_category	
 			 	
 		Seller	
@@ -44,20 +46,17 @@ UserMS	User	Account_details
 				
 				
 CartMS	Cart	Cart_items	
-      product_id	
+      			product_id	
 			product_name	
 			seller_name	
 			category	
 			quantity	
-				
-		ekart	user_id	
-			cart_id	
-			List<Cart_items> items	
-			quantity	
+			user_id
 				
 		Wishlist	
-      user_id	
-			product_id	
+      			user_id	
+			product_id
+			display_name
 			short_description	
 			category	
 				
